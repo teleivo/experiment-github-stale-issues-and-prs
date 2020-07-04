@@ -1,0 +1,18 @@
+name: "Close stale issues"
+on:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-pr-message: |
+          Hi, we just wanted to check in to see if you are still working on this PR.
+          If yes, please comment or push any updates you have.
+          If no, we will close the PR automatically in 1 day.
+        days-before-stale: 1
+        days-before-close: 1
