@@ -6,3 +6,5 @@ Experiment with GitHub actions/bots for stale issues and PRs
 needs a super fast build script
 
 `./build`
+
+I had an idea :)
